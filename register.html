@@ -32,35 +32,30 @@
     <section class="registration">
         <div class="register-form">
             <h1>Register <span>Here</span></h1>
-            <form action="" onsubmit="return validateform()">
+            <form action="http://localhost/php2/database.php" onsubmit="return validateform()" method="POST">
 
             <input type="text" name="myname1" placeholder="Name" id="name" required>
             <input type="email" name="myemail" placeholder="Email-Id" id="" required>
             <input type="tel" name="myphone" placeholder="Phone No." id="phonenum" required>
             <input type="number" name="myage" placeholder="Age" id="" required>
             <h4>Gender</h4>
-            <input type="radio" name="mygender" id="" required> Male &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-            <input type="radio" name="mygender" id=""> Female
-            <h4>Departure</h4>
-            <input type="datetime-local" name="departuredate" id="" required>
-            <h4>Return</h4>
-            <input type="datetime-local" name="returndate" id="" required>
-            <h4>Travel Destination</h4>
-            <input type="checkbox" name="td" id=""> Kashmir &nbsp; &nbsp; &nbsp;
-            <input type="checkbox" name="td" id=""> Istanbul &nbsp; &nbsp; &nbsp;
-            <input type="checkbox" name="td" id=""> Paris &nbsp; &nbsp; &nbsp;
-            <input type="checkbox" name="td" id=""> Bali &nbsp; &nbsp; &nbsp;
-            <input type="checkbox" name="td" id=""> Dubai &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <input type="checkbox" name="td" id=""> Geneva &nbsp; &nbsp; &nbsp; 
-            <input type="checkbox" name="td" id=""> Port Blair &nbsp; &nbsp; &nbsp;
-            <input type="checkbox" name="td" id=""> Rome &nbsp; &nbsp; &nbsp;
-            <br> <br>
+            <input type="radio" name="mygender" id="" value="male"> Male &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+            <input type="radio" name="mygender" id="" value="female"> Female
             <h4>Package</h4>
-            <input type="radio" name="locations" id="loc1" required> Bronze &nbsp; &nbsp; &nbsp;
-            <input type="radio" name="locations" id="loc1"> Silver &nbsp; &nbsp; &nbsp;
-            <input type="radio" name="locations" id="loc1"> Gold &nbsp; &nbsp; &nbsp;
-            <input type="radio" name="locations" id="loc1"> Platinum &nbsp; &nbsp; &nbsp;
+            <input type="radio" name="locations" id="loc1" value="Bronze" required> Bronze &nbsp; &nbsp; &nbsp;
+            <input type="radio" name="locations" id="loc1" value="Silver"> Silver &nbsp; &nbsp; &nbsp;
+            <input type="radio" name="locations" id="loc1" value="Gold"> Gold &nbsp; &nbsp; &nbsp;
+            <input type="radio" name="locations" id="loc1" value="Platinum"> Platinum &nbsp; &nbsp; &nbsp;
             <br> <br> 
+            <h4>When Are You Planning For?</h4>
+            <select name="planning_for" id="planning_for">
+                <option value="within_this_week">Within this week</option>
+                <option value="within_this_month">Within this month</option>
+                <option value="within_this_year">Within this year</option>
+            </select> <br><br>
+            <!-- <input type="file" name="" id="real-file">
+            <button type="button" id="custom-button">CHOOSE A FILE</button>
+            <span id="custom-text">No file chosen, yet</span> -->
             <input type="checkbox" name="t&c" id="" checked required> I accept the Terms & Conditions.
             <br> <br> 
             <input type="submit" value="Submit" class="submitbtn">
