@@ -82,13 +82,13 @@
             <div class="footlinks">
                 <h4>Connect</h4>
                 <div class="social">
-                    <a href="https://www.facebook.com/mohd.rahil.blogger" target="_blank"><i class='bx bxl-facebook'></i></a>
-                    <a href="https://www.instagram.com/mohdrahil101" target="_blank"><i class='bx bxl-instagram' ></i></a>
-                    <a href="https://www.twitter.com/mohdrahil101" target="_blank"><i class='bx bxl-twitter' ></i></a>
-                    <a href="https://www.linkedin.com/in/mohdrahil101" target="_blank"><i class='bx bxl-linkedin' ></i></a>
-                    <a href="https://www.youtube.com/techdollarz" target="_blank"><i class='bx bxl-youtube' ></i></a>
-                    <a href="https://www.mohdrahil.wordpress.com" target="_blank"><i class='bx bxl-wordpress' ></i></a>
-                    <a href="https://www.github.com/mohdrahil101" target="_blank"><i class='bx bxl-github'></i></a>
+                    <a href="#" target="_blank"><i class='bx bxl-facebook'></i></a>
+                    <a href="#" target="_blank"><i class='bx bxl-instagram' ></i></a>
+                    <a href="#" target="_blank"><i class='bx bxl-twitter' ></i></a>
+                    <a href="#" target="_blank"><i class='bx bxl-linkedin' ></i></a>
+                    <a href="#" target="_blank"><i class='bx bxl-youtube' ></i></a>
+                    <a href="#" target="_blank"><i class='bx bxl-wordpress' ></i></a>
+                    <a href="#" target="_blank"><i class='bx bxl-github'></i></a>
                 </div>
             </div>
             
@@ -96,7 +96,8 @@
     </div>
 
     <div class="end">
-        <p>Copyright © 2022 Firstflight Travels All Rights Reserved.<br>Website developed by: Mohd. Rahil</p>
+        <p>Copyright © 2024 Paryatan All Rights Reserved.</p>
+        <p><br>Website developed by:<br> Yatharth Bhavsar<br>Krishna Majethiya<br>Chittal Dave<br>Prachi Rathi<br></p>
     </div>
 </section>
 
@@ -104,12 +105,17 @@
 <script>
     function validateform(){ 
         var tel=document.getElementById("phonenum").value;  
-
+        var name = document.getElementById("name").value.trim();
+        var nameRegex = /^[A-Za-z]+$/;
+        if (!nameRegex.test(name)) {
+            alert("Name can only contain characters (A-Z, a-z)!");
+            return;
+        }
         if(tel.length<10){  
             alert("Phone number must be of atleast 10 digits!");  
             return false;  
         } else if(isNaN(tel)){
-            alert("Phone number should not include character!");
+            alert("Phone number should not include digits!");
             return false;
         }
         return true;
